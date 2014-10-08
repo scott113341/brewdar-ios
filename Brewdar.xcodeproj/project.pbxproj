@@ -1,0 +1,427 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D235D83619E6057A00297B47 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D235D83519E6057A00297B47 /* main.m */; };
+		D235D83919E6057A00297B47 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D235D83819E6057A00297B47 /* AppDelegate.m */; };
+		D235D83C19E6057A00297B47 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D235D83B19E6057A00297B47 /* ViewController.m */; };
+		D235D83F19E6057A00297B47 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D235D83D19E6057A00297B47 /* Main.storyboard */; };
+		D235D84119E6057A00297B47 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D235D84019E6057A00297B47 /* Images.xcassets */; };
+		D235D84419E6057A00297B47 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D235D84219E6057A00297B47 /* LaunchScreen.xib */; };
+		D235D85019E6057A00297B47 /* BrewdarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D235D84F19E6057A00297B47 /* BrewdarTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D235D84A19E6057A00297B47 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D235D82819E6057A00297B47 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D235D82F19E6057A00297B47;
+			remoteInfo = Brewdar;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D235D83019E6057A00297B47 /* Brewdar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Brewdar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D235D83419E6057A00297B47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D235D83519E6057A00297B47 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D235D83719E6057A00297B47 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D235D83819E6057A00297B47 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D235D83A19E6057A00297B47 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		D235D83B19E6057A00297B47 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		D235D83E19E6057A00297B47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D235D84019E6057A00297B47 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		D235D84319E6057A00297B47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		D235D84919E6057A00297B47 /* BrewdarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BrewdarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D235D84E19E6057A00297B47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D235D84F19E6057A00297B47 /* BrewdarTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BrewdarTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D235D82D19E6057A00297B47 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D235D84619E6057A00297B47 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D235D82719E6057A00297B47 = {
+			isa = PBXGroup;
+			children = (
+				D235D83219E6057A00297B47 /* Brewdar */,
+				D235D84C19E6057A00297B47 /* BrewdarTests */,
+				D235D83119E6057A00297B47 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D235D83119E6057A00297B47 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D235D83019E6057A00297B47 /* Brewdar.app */,
+				D235D84919E6057A00297B47 /* BrewdarTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D235D83219E6057A00297B47 /* Brewdar */ = {
+			isa = PBXGroup;
+			children = (
+				D235D83719E6057A00297B47 /* AppDelegate.h */,
+				D235D83819E6057A00297B47 /* AppDelegate.m */,
+				D235D83A19E6057A00297B47 /* ViewController.h */,
+				D235D83B19E6057A00297B47 /* ViewController.m */,
+				D235D83D19E6057A00297B47 /* Main.storyboard */,
+				D235D84019E6057A00297B47 /* Images.xcassets */,
+				D235D84219E6057A00297B47 /* LaunchScreen.xib */,
+				D235D83319E6057A00297B47 /* Supporting Files */,
+			);
+			path = Brewdar;
+			sourceTree = "<group>";
+		};
+		D235D83319E6057A00297B47 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D235D83419E6057A00297B47 /* Info.plist */,
+				D235D83519E6057A00297B47 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D235D84C19E6057A00297B47 /* BrewdarTests */ = {
+			isa = PBXGroup;
+			children = (
+				D235D84F19E6057A00297B47 /* BrewdarTests.m */,
+				D235D84D19E6057A00297B47 /* Supporting Files */,
+			);
+			path = BrewdarTests;
+			sourceTree = "<group>";
+		};
+		D235D84D19E6057A00297B47 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D235D84E19E6057A00297B47 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D235D82F19E6057A00297B47 /* Brewdar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D235D85319E6057A00297B47 /* Build configuration list for PBXNativeTarget "Brewdar" */;
+			buildPhases = (
+				D235D82C19E6057A00297B47 /* Sources */,
+				D235D82D19E6057A00297B47 /* Frameworks */,
+				D235D82E19E6057A00297B47 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Brewdar;
+			productName = Brewdar;
+			productReference = D235D83019E6057A00297B47 /* Brewdar.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D235D84819E6057A00297B47 /* BrewdarTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D235D85619E6057A00297B47 /* Build configuration list for PBXNativeTarget "BrewdarTests" */;
+			buildPhases = (
+				D235D84519E6057A00297B47 /* Sources */,
+				D235D84619E6057A00297B47 /* Frameworks */,
+				D235D84719E6057A00297B47 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D235D84B19E6057A00297B47 /* PBXTargetDependency */,
+			);
+			name = BrewdarTests;
+			productName = BrewdarTests;
+			productReference = D235D84919E6057A00297B47 /* BrewdarTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D235D82819E6057A00297B47 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = PWNZONE;
+				TargetAttributes = {
+					D235D82F19E6057A00297B47 = {
+						CreatedOnToolsVersion = 6.0.1;
+					};
+					D235D84819E6057A00297B47 = {
+						CreatedOnToolsVersion = 6.0.1;
+						TestTargetID = D235D82F19E6057A00297B47;
+					};
+				};
+			};
+			buildConfigurationList = D235D82B19E6057A00297B47 /* Build configuration list for PBXProject "Brewdar" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D235D82719E6057A00297B47;
+			productRefGroup = D235D83119E6057A00297B47 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D235D82F19E6057A00297B47 /* Brewdar */,
+				D235D84819E6057A00297B47 /* BrewdarTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D235D82E19E6057A00297B47 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D235D83F19E6057A00297B47 /* Main.storyboard in Resources */,
+				D235D84419E6057A00297B47 /* LaunchScreen.xib in Resources */,
+				D235D84119E6057A00297B47 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D235D84719E6057A00297B47 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D235D82C19E6057A00297B47 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D235D83C19E6057A00297B47 /* ViewController.m in Sources */,
+				D235D83919E6057A00297B47 /* AppDelegate.m in Sources */,
+				D235D83619E6057A00297B47 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D235D84519E6057A00297B47 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D235D85019E6057A00297B47 /* BrewdarTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D235D84B19E6057A00297B47 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D235D82F19E6057A00297B47 /* Brewdar */;
+			targetProxy = D235D84A19E6057A00297B47 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D235D83D19E6057A00297B47 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D235D83E19E6057A00297B47 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D235D84219E6057A00297B47 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D235D84319E6057A00297B47 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D235D85119E6057A00297B47 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D235D85219E6057A00297B47 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D235D85419E6057A00297B47 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Brewdar/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D235D85519E6057A00297B47 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Brewdar/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		D235D85719E6057A00297B47 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = BrewdarTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Brewdar.app/Brewdar";
+			};
+			name = Debug;
+		};
+		D235D85819E6057A00297B47 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = BrewdarTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Brewdar.app/Brewdar";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D235D82B19E6057A00297B47 /* Build configuration list for PBXProject "Brewdar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D235D85119E6057A00297B47 /* Debug */,
+				D235D85219E6057A00297B47 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D235D85319E6057A00297B47 /* Build configuration list for PBXNativeTarget "Brewdar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D235D85419E6057A00297B47 /* Debug */,
+				D235D85519E6057A00297B47 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D235D85619E6057A00297B47 /* Build configuration list for PBXNativeTarget "BrewdarTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D235D85719E6057A00297B47 /* Debug */,
+				D235D85819E6057A00297B47 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D235D82819E6057A00297B47 /* Project object */;
+}
