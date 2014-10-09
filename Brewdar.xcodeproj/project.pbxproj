@@ -15,6 +15,7 @@
 		D235D84419E6057A00297B47 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D235D84219E6057A00297B47 /* LaunchScreen.xib */; };
 		D235D85019E6057A00297B47 /* BrewdarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D235D84F19E6057A00297B47 /* BrewdarTests.m */; };
 		D235D85A19E619C400297B47 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D235D85919E619C400297B47 /* Realm.framework */; };
+		D2C979A219E61BF60058C0A6 /* Device.m in Sources */ = {isa = PBXBuildFile; fileRef = D2C979A119E61BF60058C0A6 /* Device.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,8 @@
 		D235D84E19E6057A00297B47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D235D84F19E6057A00297B47 /* BrewdarTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BrewdarTests.m; sourceTree = "<group>"; };
 		D235D85919E619C400297B47 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
+		D2C979A019E61BF60058C0A6 /* Device.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Device.h; sourceTree = "<group>"; };
+		D2C979A119E61BF60058C0A6 /* Device.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Device.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +88,7 @@
 		D235D83219E6057A00297B47 /* Brewdar */ = {
 			isa = PBXGroup;
 			children = (
+				D235D85B19E61AA800297B47 /* Models */,
 				D235D83719E6057A00297B47 /* AppDelegate.h */,
 				D235D83819E6057A00297B47 /* AppDelegate.m */,
 				D235D83A19E6057A00297B47 /* ViewController.h */,
@@ -121,6 +125,15 @@
 				D235D84E19E6057A00297B47 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D235D85B19E61AA800297B47 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D2C979A019E61BF60058C0A6 /* Device.h */,
+				D2C979A119E61BF60058C0A6 /* Device.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -225,6 +238,7 @@
 			files = (
 				D235D83C19E6057A00297B47 /* ViewController.m in Sources */,
 				D235D83919E6057A00297B47 /* AppDelegate.m in Sources */,
+				D2C979A219E61BF60058C0A6 /* Device.m in Sources */,
 				D235D83619E6057A00297B47 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -424,6 +438,7 @@
 				D235D85519E6057A00297B47 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D235D85619E6057A00297B47 /* Build configuration list for PBXNativeTarget "BrewdarTests" */ = {
 			isa = XCConfigurationList;
@@ -432,6 +447,7 @@
 				D235D85819E6057A00297B47 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
