@@ -15,6 +15,8 @@
 @property NSString *name;
 @property NSString *authenticationToken;
 
++ (Device *)thisDevice;
+
 @end
 
 // This protocol enables typed collections. i.e.:

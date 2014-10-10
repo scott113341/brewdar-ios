@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "Device.h"
 
 @interface ViewController ()
 
@@ -16,12 +17,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    RLMArray *devices = [Device allObjects];
+    NSLog(@"%lu devices", (unsigned long)devices.count);
+    
+    Device *device = [Device thisDevice];
+    NSLog(@"thisDevice: %@", device);
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end
