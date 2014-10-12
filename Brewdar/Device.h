@@ -2,10 +2,13 @@
 
 @interface Device : RLMObject
 
-@property NSString *email;
-@property NSString *deviceId;
-@property NSString *name;
 @property NSString *authenticationToken;
+@property NSString *deviceId;
+@property NSString *deviceToken;
+@property NSString *email;
+@property NSString *name;
+
+- (void)authenticate;
 
 + (Device *)thisDevice;
 

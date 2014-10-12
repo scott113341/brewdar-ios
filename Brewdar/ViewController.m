@@ -1,5 +1,6 @@
 #import "ViewController.h"
 #import "Device.h"
+#import <UIKit/UIKit.h>
 
 @interface ViewController ()
 
@@ -10,11 +11,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    RLMArray *devices = [Device allObjects];
-    NSLog(@"%lu devices", (unsigned long)devices.count);
-    
     Device *device = [Device thisDevice];
-    NSLog(@"thisDevice: %@", device);
+    NSLog(@"this device: %@", device);
+    
+    UIUserNotificationSettings *notificationSettings = [UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeAlert) categories:nil];
+    [[UIApplication sharedApplication] registerUserNotificationSettings:notificationSettings];
+    
+    [device authenticate];
 }
 
 - (void)didReceiveMemoryWarning {
