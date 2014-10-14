@@ -8,7 +8,7 @@
 @property NSString *email;
 @property NSString *name;
 
-- (void)authenticate;
+- (void)authenticateWithCallback:(id)receiver;
 
 + (Device *)thisDevice;
 + (NSDictionary *)defaultPropertyValues;

@@ -1,10 +1,11 @@
 #import "Device.h"
 #import <UIKit/UIKit.h>
 #import "AFNetworking.h"
+#import "MainNavigationController.h"
 
 @implementation Device
 
-- (void)authenticate {
+- (void)authenticateWithCallback:(id)receiver {
     NSLog(@"authenticating");
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
@@ -12,6 +13,10 @@
     NSDictionary *parameters = [Device thisDevice].toDictionary;
     [manager POST:url parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSLog(@"authentication response: %@", responseObject);
+        
+        NSNumber *error = responseObject[@"error"];
+        [receiver deviceAuthenticationCallbackWithErrorCode:error];
+        
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Error: %@", error);
     }];

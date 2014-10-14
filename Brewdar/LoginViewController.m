@@ -10,17 +10,49 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.navigationItem.hidesBackButton = YES;
+    
     Device *device = [Device thisDevice];
-    NSLog(@"this device: %@", device);
-    
-    UIUserNotificationSettings *notificationSettings = [UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeAlert) categories:nil];
-    [[UIApplication sharedApplication] registerUserNotificationSettings:notificationSettings];
-    
-    [device authenticate];
+    self.emailField.text = device.email;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
+- (void)loginButtonWasPressed:(id)sender {
+    NSLog(@"login button pressed");
+    
+    RLMRealm *realm = [RLMRealm defaultRealm];
+    Device *device = [Device thisDevice];
+    
+    [realm beginWriteTransaction];
+    device.email = [self.emailField text];
+    [realm commitWriteTransaction];
+    
+    [device authenticateWithCallback:self];
+}
+
+- (void)deviceAuthenticationCallbackWithErrorCode:(NSNumber *)error {
+    UIAlertView *alert;
+    
+    if ([error  isEqual:@0]) {
+        [self.navigationController popViewControllerAnimated:YES];
+        return;
+    }
+    else if ([error  isEqual:@1]) {
+        alert = [[UIAlertView alloc] initWithTitle:@"Error!" message:@"Invalid email address.  Did you make a typo?" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    }
+    else if ([error  isEqual:@2]) {
+        alert = [[UIAlertView alloc] initWithTitle:@"Error!" message:@"Invalid device parameters.  gg" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    }
+    else if ([error  isEqual:@3]) {
+        alert = [[UIAlertView alloc] initWithTitle:@"Error!" message:@"Device is not verified.  Please verify your device by clicking the link in the email we sent you." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    }
+    else if ([error  isEqual:@4]) {
+        alert = [[UIAlertView alloc] initWithTitle:@"Error!" message:@"Incorrect authentication token.  gg" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    }
+    else {
+        alert = [[UIAlertView alloc] initWithTitle:@"Error!" message:@"Unknown error.  gg" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    }
+    
+    [alert show];
 }
 
 @end

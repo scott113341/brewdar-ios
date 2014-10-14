@@ -7,7 +7,7 @@
         <!--Login View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController title="Login View Controller" id="vXZ-lx-hvc" customClass="LoginViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" title="Login View Controller" id="vXZ-lx-hvc" customClass="LoginViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -32,6 +32,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="loginButtonWasPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="fsl-wa-Flq"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UZS-3O-JPv">
                                 <rect key="frame" x="175" y="184" width="250" height="30"/>
@@ -63,15 +66,38 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Brewdar" id="AI5-9T-QtN"/>
+                    <connections>
+                        <outlet property="emailField" destination="UZS-3O-JPv" id="9EX-9j-qu8"/>
+                        <outlet property="loginButton" destination="8nN-zR-cl4" id="fpW-Bt-8UD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="827" y="150"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--View Controller-->
+        <scene sceneID="KlZ-wc-IIn">
+            <objects>
+                <viewController id="h2Z-Ak-5e3" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pV9-hb-6eV"/>
+                        <viewControllerLayoutGuide type="bottom" id="S5n-ET-S6N"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zb4-cE-Lmc">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="zaf-mg-LOC"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hz0-Bs-zsR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="827" y="844"/>
+        </scene>
+        <!--Main Navigation Controller-->
         <scene sceneID="DwP-mB-qKL">
             <objects>
-                <navigationController id="lcz-9D-V7C" sceneMemberID="viewController">
+                <navigationController id="lcz-9D-V7C" customClass="MainNavigationController" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="dR8-aB-GLj">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -84,7 +110,8 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </toolbar>
                     <connections>
-                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="aby-d4-lQ8"/>
+                        <segue destination="h2Z-Ak-5e3" kind="relationship" relationship="rootViewController" id="cXi-iW-Fgp"/>
+                        <segue destination="vXZ-lx-hvc" kind="show" identifier="presentLoginViewController" id="hy1-DU-y2Z"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="28P-Sn-dZ8" userLabel="First Responder" sceneMemberID="firstResponder"/>

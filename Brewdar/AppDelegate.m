@@ -56,6 +56,13 @@
 - (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
     NSLog(@"failed to register for remote notifications");
     NSLog(@"%@", error);
+    
+    NSLog(@"pretending that we sucessfully registered and manually setting the auth token");
+    RLMRealm *realm = [RLMRealm defaultRealm];
+    Device *device = [Device thisDevice];
+    [realm beginWriteTransaction];
+    device.authenticationToken = @"abc123";
+    [realm commitWriteTransaction];
 }
 
 @end

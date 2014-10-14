@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		560F5E67B8EE9E09121F5972 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 627027A92185B69AF3914492 /* libPods.a */; };
+		D21F61B519ED0936008F23BF /* MainNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D21F61B419ED0936008F23BF /* MainNavigationController.m */; };
 		D235D83619E6057A00297B47 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D235D83519E6057A00297B47 /* main.m */; };
 		D235D83919E6057A00297B47 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D235D83819E6057A00297B47 /* AppDelegate.m */; };
-		D235D83C19E6057A00297B47 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D235D83B19E6057A00297B47 /* ViewController.m */; };
 		D235D83F19E6057A00297B47 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D235D83D19E6057A00297B47 /* Main.storyboard */; };
 		D235D84119E6057A00297B47 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D235D84019E6057A00297B47 /* Images.xcassets */; };
 		D235D84419E6057A00297B47 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D235D84219E6057A00297B47 /* LaunchScreen.xib */; };
@@ -34,13 +34,13 @@
 /* Begin PBXFileReference section */
 		627027A92185B69AF3914492 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		85206CF1AC480E4CE6EBF63C /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		D21F61B319ED0936008F23BF /* MainNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainNavigationController.h; sourceTree = "<group>"; };
+		D21F61B419ED0936008F23BF /* MainNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainNavigationController.m; sourceTree = "<group>"; };
 		D235D83019E6057A00297B47 /* Brewdar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Brewdar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D235D83419E6057A00297B47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D235D83519E6057A00297B47 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D235D83719E6057A00297B47 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D235D83819E6057A00297B47 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		D235D83A19E6057A00297B47 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		D235D83B19E6057A00297B47 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		D235D83E19E6057A00297B47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D235D84019E6057A00297B47 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D235D84319E6057A00297B47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -119,8 +119,6 @@
 				D235D85B19E61AA800297B47 /* Models */,
 				D235D83719E6057A00297B47 /* AppDelegate.h */,
 				D235D83819E6057A00297B47 /* AppDelegate.m */,
-				D235D83A19E6057A00297B47 /* ViewController.h */,
-				D235D83B19E6057A00297B47 /* ViewController.m */,
 				D235D83D19E6057A00297B47 /* Main.storyboard */,
 				D235D84019E6057A00297B47 /* Images.xcassets */,
 				D235D84219E6057A00297B47 /* LaunchScreen.xib */,
@@ -169,6 +167,8 @@
 		D26C3AB019EA2CF0003CF98C /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				D21F61B319ED0936008F23BF /* MainNavigationController.h */,
+				D21F61B419ED0936008F23BF /* MainNavigationController.m */,
 				D26C3ABC19EA2E24003CF98C /* LoginViewController.h */,
 				D26C3ABD19EA2E24003CF98C /* LoginViewController.m */,
 			);
@@ -312,8 +312,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D235D83C19E6057A00297B47 /* ViewController.m in Sources */,
 				D235D83919E6057A00297B47 /* AppDelegate.m in Sources */,
+				D21F61B519ED0936008F23BF /* MainNavigationController.m in Sources */,
 				D2C979A219E61BF60058C0A6 /* Device.m in Sources */,
 				D235D83619E6057A00297B47 /* main.m in Sources */,
 				D26C3ABE19EA2E24003CF98C /* LoginViewController.m in Sources */,
