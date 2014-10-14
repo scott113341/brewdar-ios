@@ -2,6 +2,4 @@
 
 @interface LoginViewController : UIViewController
 
-@property (nonatomic) IBOutlet UIView *view;
-
 @end

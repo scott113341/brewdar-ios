@@ -11,6 +11,7 @@
 - (void)authenticate;
 
 + (Device *)thisDevice;
++ (NSDictionary *)defaultPropertyValues;
 
 @end
 

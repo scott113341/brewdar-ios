@@ -1,23 +1,32 @@
 #import "Device.h"
 #import <UIKit/UIKit.h>
+#import "AFNetworking.h"
 
 @implementation Device
 
 - (void)authenticate {
     NSLog(@"authenticating");
     
-    NSURL *url = [NSURL URLWithString:@"http://127.0.0.1:3000/athenticate"];
-    NSURLSession *session = [NSURLSession sharedSession];
-    NSURLSessionDataTask *dataTask = [session dataTaskWithURL:url completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-        NSLog(@"%@", data);
-        NSLog(@"%@", response);
-        NSLog(@"%@", error);
-        
-        NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-        NSLog(@"%@", json);
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    NSString *url = @"http://localhost:3000/authenticate";
+    NSDictionary *parameters = [Device thisDevice].toDictionary;
+    [manager POST:url parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSLog(@"authentication response: %@", responseObject);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
     }];
-    
-    [dataTask resume];
+}
+
+- (NSDictionary *)toDictionary {
+    Device *device = [Device thisDevice];
+    NSDictionary *dictionary = @{
+                                 @"authentication_token": device.authenticationToken,
+                                 @"device_id": device.deviceId,
+                                 @"device_token": device.deviceToken,
+                                 @"email": device.email,
+                                 @"device_name": device.name,
+    };
+    return dictionary;
 }
 
 + (Device *)thisDevice {
@@ -30,6 +39,7 @@
         device = [[Device alloc] init];
         device.name = UIDevice.currentDevice.name;
         device.deviceId = [UIDevice currentDevice].identifierForVendor.UUIDString;
+        device.email = @"swag@swag.com";
         
         [realm beginWriteTransaction];
         [realm addObject:device];
