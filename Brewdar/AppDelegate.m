@@ -37,15 +37,24 @@
 
 
 
+# pragma mark - Notification settings
 
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if (buttonIndex == 1) {
+        [self userDidSayYesToNotifications];
+    }
+}
+
+- (void)userDidSayYesToNotifications {
+    NSLog(@"user said yes to notificatons, registering...");
+    UIUserNotificationSettings *notificationSettings = [UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeAlert) categories:nil];
+    [[UIApplication sharedApplication] registerUserNotificationSettings:notificationSettings];
+}
 
 - (void)application:(UIApplication *)application didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings {
     NSLog(@"registered for user notifications: %@", notificationSettings);
     [application registerForRemoteNotifications];
 }
-
-
-
 
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
     Device *device = [Device thisDevice];

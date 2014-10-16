@@ -15,6 +15,4 @@
 
 @end
 
-// This protocol enables typed collections. i.e.:
-// RLMArray<Device>
 RLM_ARRAY_TYPE(Device)

@@ -42,8 +42,10 @@
     // create device if needed
     if (devices.count == 0) {
         device = [[Device alloc] init];
-        device.name = UIDevice.currentDevice.name;
         device.deviceId = [UIDevice currentDevice].identifierForVendor.UUIDString;
+        device.name = UIDevice.currentDevice.name;
+        
+        // todo remove
         device.email = @"swag@swag.com";
         
         [realm beginWriteTransaction];

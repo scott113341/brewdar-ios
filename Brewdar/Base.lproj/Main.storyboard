@@ -44,7 +44,7 @@
                                     <constraint firstAttribute="width" constant="250" id="ETf-jz-KzQ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" keyboardAppearance="alert"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" keyboardAppearance="alert" returnKeyType="go"/>
                                 <attributedString key="userComments">
                                     <fragment content="GGG">
                                         <attributes>
@@ -53,6 +53,9 @@
                                         </attributes>
                                     </fragment>
                                 </attributedString>
+                                <connections>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="aek-S0-fj3"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -73,26 +76,57 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="827" y="-570"/>
+        </scene>
+        <!--Brewdar-->
+        <scene sceneID="mw1-rv-eoo">
+            <objects>
+                <tableViewController id="Q69-bU-Jdr" customClass="BeerWatchTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="AvN-Pu-nuS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="swag" id="tD8-cG-jwZ">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tD8-cG-jwZ" id="6I0-Tv-k6g">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Q69-bU-Jdr" id="snQ-9b-F4N"/>
+                            <outlet property="delegate" destination="Q69-bU-Jdr" id="QwP-iP-yXY"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Brewdar" id="bZM-hk-S8b">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="aVE-mU-2HD"/>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="BYG-F1-EVQ" kind="show" identifier="presentShowBeerWatchViewController" id="ZJ7-Lb-Gym"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V88-6v-FvL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
             <point key="canvasLocation" x="827" y="150"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="KlZ-wc-IIn">
+        <!--Show Beer Watch View Controller-->
+        <scene sceneID="OsM-Us-ua3">
             <objects>
-                <viewController id="h2Z-Ak-5e3" sceneMemberID="viewController">
+                <viewController id="BYG-F1-EVQ" customClass="ShowBeerWatchViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="pV9-hb-6eV"/>
-                        <viewControllerLayoutGuide type="bottom" id="S5n-ET-S6N"/>
+                        <viewControllerLayoutGuide type="top" id="Akm-ll-reg"/>
+                        <viewControllerLayoutGuide type="bottom" id="JXQ-jw-U3R"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="zb4-cE-Lmc">
+                    <view key="view" contentMode="scaleToFill" id="z71-eo-xcd">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="zaf-mg-LOC"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Hz0-Bs-zsR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sWc-G0-PfF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="827" y="844"/>
+            <point key="canvasLocation" x="1539" y="150"/>
         </scene>
         <!--Main Navigation Controller-->
         <scene sceneID="DwP-mB-qKL">
@@ -110,8 +144,8 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </toolbar>
                     <connections>
-                        <segue destination="h2Z-Ak-5e3" kind="relationship" relationship="rootViewController" id="cXi-iW-Fgp"/>
                         <segue destination="vXZ-lx-hvc" kind="show" identifier="presentLoginViewController" id="hy1-DU-y2Z"/>
+                        <segue destination="Q69-bU-Jdr" kind="relationship" relationship="rootViewController" id="0mv-Yq-7uf"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="28P-Sn-dZ8" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		560F5E67B8EE9E09121F5972 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 627027A92185B69AF3914492 /* libPods.a */; };
+		D214533419EE052500986E99 /* BeerWatchTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D214533319EE052500986E99 /* BeerWatchTableViewController.m */; };
+		D214533819EE05B000986E99 /* BeerWatch.m in Sources */ = {isa = PBXBuildFile; fileRef = D214533719EE05B000986E99 /* BeerWatch.m */; };
+		D214533B19EEF29B00986E99 /* ShowBeerWatchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D214533A19EEF29B00986E99 /* ShowBeerWatchViewController.m */; };
+		D214534219EF3F0900986E99 /* Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = D214534119EF3F0900986E99 /* Utility.m */; };
 		D21F61B519ED0936008F23BF /* MainNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D21F61B419ED0936008F23BF /* MainNavigationController.m */; };
 		D235D83619E6057A00297B47 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D235D83519E6057A00297B47 /* main.m */; };
 		D235D83919E6057A00297B47 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D235D83819E6057A00297B47 /* AppDelegate.m */; };
@@ -34,6 +38,14 @@
 /* Begin PBXFileReference section */
 		627027A92185B69AF3914492 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		85206CF1AC480E4CE6EBF63C /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		D214533219EE052500986E99 /* BeerWatchTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeerWatchTableViewController.h; sourceTree = "<group>"; };
+		D214533319EE052500986E99 /* BeerWatchTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeerWatchTableViewController.m; sourceTree = "<group>"; };
+		D214533619EE05B000986E99 /* BeerWatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeerWatch.h; sourceTree = "<group>"; };
+		D214533719EE05B000986E99 /* BeerWatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeerWatch.m; sourceTree = "<group>"; };
+		D214533919EEF29B00986E99 /* ShowBeerWatchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowBeerWatchViewController.h; sourceTree = "<group>"; };
+		D214533A19EEF29B00986E99 /* ShowBeerWatchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowBeerWatchViewController.m; sourceTree = "<group>"; };
+		D214534019EF3F0900986E99 /* Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utility.h; sourceTree = "<group>"; };
+		D214534119EF3F0900986E99 /* Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utility.m; sourceTree = "<group>"; };
 		D21F61B319ED0936008F23BF /* MainNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainNavigationController.h; sourceTree = "<group>"; };
 		D21F61B419ED0936008F23BF /* MainNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainNavigationController.m; sourceTree = "<group>"; };
 		D235D83019E6057A00297B47 /* Brewdar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Brewdar.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,6 +104,26 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D214533519EE052B00986E99 /* BeerWatch */ = {
+			isa = PBXGroup;
+			children = (
+				D214533219EE052500986E99 /* BeerWatchTableViewController.h */,
+				D214533319EE052500986E99 /* BeerWatchTableViewController.m */,
+				D214533919EEF29B00986E99 /* ShowBeerWatchViewController.h */,
+				D214533A19EEF29B00986E99 /* ShowBeerWatchViewController.m */,
+			);
+			name = BeerWatch;
+			sourceTree = "<group>";
+		};
+		D214533C19EF3E0900986E99 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				D214534019EF3F0900986E99 /* Utility.h */,
+				D214534119EF3F0900986E99 /* Utility.m */,
+			);
+			name = Other;
+			sourceTree = "<group>";
+		};
 		D235D82719E6057A00297B47 = {
 			isa = PBXGroup;
 			children = (
@@ -115,8 +147,9 @@
 		D235D83219E6057A00297B47 /* Brewdar */ = {
 			isa = PBXGroup;
 			children = (
-				D26C3AB019EA2CF0003CF98C /* Login */,
+				D214533C19EF3E0900986E99 /* Other */,
 				D235D85B19E61AA800297B47 /* Models */,
+				D26C3AB019EA2CF0003CF98C /* Controllers */,
 				D235D83719E6057A00297B47 /* AppDelegate.h */,
 				D235D83819E6057A00297B47 /* AppDelegate.m */,
 				D235D83D19E6057A00297B47 /* Main.storyboard */,
@@ -160,19 +193,22 @@
 			children = (
 				D2C979A019E61BF60058C0A6 /* Device.h */,
 				D2C979A119E61BF60058C0A6 /* Device.m */,
+				D214533619EE05B000986E99 /* BeerWatch.h */,
+				D214533719EE05B000986E99 /* BeerWatch.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
 		};
-		D26C3AB019EA2CF0003CF98C /* Login */ = {
+		D26C3AB019EA2CF0003CF98C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				D214533519EE052B00986E99 /* BeerWatch */,
 				D21F61B319ED0936008F23BF /* MainNavigationController.h */,
 				D21F61B419ED0936008F23BF /* MainNavigationController.m */,
 				D26C3ABC19EA2E24003CF98C /* LoginViewController.h */,
 				D26C3ABD19EA2E24003CF98C /* LoginViewController.m */,
 			);
-			name = Login;
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -226,6 +262,7 @@
 				TargetAttributes = {
 					D235D82F19E6057A00297B47 = {
 						CreatedOnToolsVersion = 6.0.1;
+						DevelopmentTeam = 7YKPAZWV8N;
 					};
 					D235D84819E6057A00297B47 = {
 						CreatedOnToolsVersion = 6.0.1;
@@ -312,9 +349,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D214533819EE05B000986E99 /* BeerWatch.m in Sources */,
 				D235D83919E6057A00297B47 /* AppDelegate.m in Sources */,
 				D21F61B519ED0936008F23BF /* MainNavigationController.m in Sources */,
 				D2C979A219E61BF60058C0A6 /* Device.m in Sources */,
+				D214534219EF3F0900986E99 /* Utility.m in Sources */,
+				D214533419EE052500986E99 /* BeerWatchTableViewController.m in Sources */,
+				D214533B19EEF29B00986E99 /* ShowBeerWatchViewController.m in Sources */,
 				D235D83619E6057A00297B47 /* main.m in Sources */,
 				D26C3ABE19EA2E24003CF98C /* LoginViewController.m in Sources */,
 			);
@@ -439,13 +480,17 @@
 			baseConfigurationReference = 85206CF1AC480E4CE6EBF63C /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Brewdar/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -454,13 +499,17 @@
 			baseConfigurationReference = F564FFE2CF6ED3E9CF52B1C3 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Brewdar/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

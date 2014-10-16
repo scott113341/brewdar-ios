@@ -55,4 +55,12 @@
     [alert show];
 }
 
+#pragma mark - UITextViewDelegate
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [self loginButtonWasPressed:nil];
+    [textField resignFirstResponder];
+    return YES;
+}
+
 @end

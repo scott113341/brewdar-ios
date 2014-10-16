@@ -1,6 +1,7 @@
 #import "MainNavigationController.h"
 #import "Device.h"
 #import "LoginViewController.h"
+#import "Utility.h"
 
 @interface MainNavigationController ()
 
@@ -11,11 +12,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    // log realm path
     NSLog(@"%@", [RLMRealm defaultRealmPath]);
     
-    // register for user notifications
-    UIUserNotificationSettings *notificationSettings = [UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeAlert) categories:nil];
-    [[UIApplication sharedApplication] registerUserNotificationSettings:notificationSettings];
+    // attempt to register for user notifications
+    UIAlertView *alert = [Utility notificationAskUIAlert];
+    if (alert) {
+        [alert show];
+    }
     
     // attempt to authenticate device
     Device *device = [Device thisDevice];
@@ -24,20 +28,13 @@
 }
 
 - (void)deviceAuthenticationCallbackWithErrorCode:(NSNumber *)error {
-    NSLog(@"auth callback: %@", error);
-    
     if ([error  isEqual:@0]) {
-        NSLog(@"authenticated from main navigation vc");
+        NSLog(@"authenticated!");
     }
     else {
-        NSLog(@"preseting login view");
+        NSLog(@"not authenticated, preseting login view from MainNavigationController");
         [self performSegueWithIdentifier:@"presentLoginViewController" sender:self];
     }
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end
